@@ -102,9 +102,9 @@ I used the following steps to prepare this sample project:
 
 * Add entitlements
 
-* Go **Signing & Capabilities** → **+Capability** → **App Sandbox**
+  * Go **Signing & Capabilities** → **+Capability** → **App Sandbox**
 
-* Go IMKitSample.entitlements, add 
+  * Go IMKitSample.entitlements, add 
 
   ```
   key: com.apple.security.temporary-exception.mach-register.global-name
@@ -112,31 +112,31 @@ I used the following steps to prepare this sample project:
   value: $(PRODUCT_BUNDLE_IDENTIFIER)_Connection
   ```
 
-* Do `sudo chmod -R 777 /Library/Input\ Methods` on terminal.
+  * Do `sudo chmod -R 777 /Library/Input\ Methods` on terminal.
 
 * Modify build settings.
-* Go **Build Locations** → **Build Products Path** of debug → value `/Library/Input Methods`
-* Go **+** → **Add User-Defined Setting** → Set key `CONFIGURATION_BUILD_DIR`, value `/Library/Input Methods`.
-* !!! DO NOT edit thinklessly, this setting is really fragile.
+  * Go **Build Locations** → **Build Products Path** of debug → value `/Library/Input Methods`
+  * Go **+** → **Add User-Defined Setting** → Set key `CONFIGURATION_BUILD_DIR`, value `/Library/Input Methods`.
+  * !!! DO NOT edit thinklessly, this setting is really fragile.
 
 * Try Run.
 
 ## Trouble Shooting
 
-*I'm not an expert of macOS. Please don't ask too much, I don't know either.*
+* I'm not an expert of macOS. Please don't ask too much, I don't know either.*
 
 * InputMethods says **connection \*\*Failed\*\*** all though there are no diff!
-* Open 'Activity Monitor' app, search the name of your InputMethods, and kill the process. Then try again.
+  * Open 'Activity Monitor' app, search the name of your InputMethods, and kill the process. Then try again.
 
-* `print()` doesn't work!
+*   `print()` doesn't work!
 * Use `NSLog()`.
 
 * App doesn't run!
-* Check the path of build product file. If it isn't at `/Library/Input Methods/...`, something went wrong.
-* Maybe build setting went wrong. Check the settings. Especially, if `CONFIGURATION_BUILD_DIR="";` found, remove the line.
+  * Check the path of build product file. If it isn't at `/Library/Input Methods/...`, something went wrong.
+  * Maybe build setting went wrong. Check the settings. Especially, if `CONFIGURATION_BUILD_DIR="";` found, remove the line.
 * Where's my InputMethod!?!?
-* Check English section. You would found it.
-* If still not, you will have to restart your computer.
+  * Check English section. You would found it.
+  * If still not, you will have to restart your computer.
 
 ## Reference
 

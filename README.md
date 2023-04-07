@@ -123,13 +123,13 @@ I used the following steps to prepare this sample project:
 
 ## Trouble Shooting
 
-* I'm not an expert of macOS. Please don't ask too much, I don't know either.*
+*I'm not an expert of macOS. Please don't ask too much, I don't know either.*
 
 * InputMethods says **connection \*\*Failed\*\*** all though there are no diff!
   * Open 'Activity Monitor' app, search the name of your InputMethods, and kill the process. Then try again.
 
-*   `print()` doesn't work!
-* Use `NSLog()`.
+* `print()` doesn't work!
+  * Use `NSLog()`.
 
 * App doesn't run!
   * Check the path of build product file. If it isn't at `/Library/Input Methods/...`, something went wrong.

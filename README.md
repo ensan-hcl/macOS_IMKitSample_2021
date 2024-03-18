@@ -2,6 +2,8 @@
 
 This is a sample implementation of the IMKit App with Swift/SwiftUI.
 
+For more practical example, see [Typut](https://github.com/ensan-hcl/Typut). This is created in 2024.
+
 ## Working Environment
 
 Checked in July 2022.
